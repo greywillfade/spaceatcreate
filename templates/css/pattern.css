@@ -1,0 +1,23 @@
+.buy-table {
+	width: 400px;
+}
+
+.buy-table th, .buy-table td {
+	text-align: center;
+}
+
+.vcard ul {
+	list-style: none;
+	margin: 0 0 2em 0;
+}
+
+.read-more {
+	background: #ccc;
+	padding: 4px 8px;
+	font-size: 0.75em; /* 12px */
+	-webkit-border-radius: 2px;
+}
+
+.read-more:hover {
+	background: #ddd;
+}

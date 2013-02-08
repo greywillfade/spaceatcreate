@@ -1,0 +1,339 @@
+/*
+Theme Name: Space @ Create
+Theme URI: http://www.byandyparker.com
+Description: Theme for Space @ Create. This is built on HTML5blank
+Version: 1.0
+Author: Andy Parker (@theavangelist)
+Author URI: http://www.byandyparker.com
+*/
+
+/* ============================================================
+    BASE
+============================================================ */
+
+/* ============================================================
+    RESET
+============================================================ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+body {
+	color: #666;
+    font: 100%/1.5 Proxima Nova Regular, Proxima Nova, sans-serif;
+    margin: 0 auto;
+}
+
+h1 {
+    font:bold 1.75em/1.1429 sans-serif; /* 28px/32px */
+	 margin: 0.75em 0;
+}
+
+h2 {
+    text-transform:uppercase;
+}
+
+h3 {
+	margin: 0.75em 0 0;
+}
+
+p, pre, ol, ul, dl, figure, figcaption, table, fieldset {
+    margin: 0.75em 0; /* 12px 0 */
+}
+
+p, blockquote {
+	font-size: 0.875em; /* 14px */
+}
+
+blockquote {
+	font-style: italic;
+	margin-left: 1em;
+	color: #444;
+}
+
+ul, ol {
+	margin: 2em;
+}
+
+li {
+	font-size: 0.875em;
+	margin-bottom: 0.5em;
+}
+
+a {
+	color: #666;
+}
+
+a:hover, a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+small {
+    font-size:0.875em; /* 14px */
+    line-height:1.1429; /* 16px */
+}
+
+sub {
+    font-size:smaller;
+    line-height:90%;
+    vertical-align:sub;
+}
+sup {
+    font-size:smaller;
+    line-height:90%;
+    vertical-align:super;
+}
+
+/* ============================================================
+	Images
+============================================================ */
+img {
+	width: 100%;
+}
+
+.thumb {
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 1em;	
+}
+
+.logo-stamp {
+	width: 44px;
+	height: 40px;
+	margin-right: 1.5em;
+	margin-bottom: -1em;
+}
+
+/* ============================================================
+	Tables
+============================================================ */
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+td, th {
+    text-align:left;
+    border-bottom:1px solid #bcb3a6;
+    padding:0.25em 1em 0.1875em 0; /* 4px 16px 3px 0 */
+}
+
+th {
+    color:#222;
+    font:bold 0.875em/1.1429 'Proxima Nova Bold',sans-serif; /* 14px/16px */
+    border-bottom-color:#bcb3a6;
+    padding:0.5714em 0 0.5em; /* 8px 0 7px */
+}
+
+td {
+    vertical-align:top;
+}
+
+/* ============================================================
+	Forms
+============================================================ */
+.field {
+    font:1em/1.5 sans-serif;
+    border:1px solid #bcb3a6;
+    padding:0.25em;
+    width:50%;
+}
+
+label {
+    font-weight:bold;
+    line-height:1.5;
+    margin:0.25em 0;
+    display:block;
+    float:left;
+    width:20%;
+}
+
+label.check {
+    font-weight:normal;
+    margin-left:20%;
+    float:none;
+}
+
+fieldset div {
+    margin:0.75em 0;
+}
+
+fieldset abbr[title="Required"] {
+    color:#900;
+    font:normal 1.5em/0.1 sans-serif; /* 20px */
+    border-bottom:0 none;
+}
+
+fieldset em {
+    color:#666;
+    font-family:sans-serif;
+    font-style:normal;
+    font-size:0.875em; /* 14px */
+    line-height:1.1429; /* 16px */
+    margin:0.25em 0 0.25em 20%;
+    display:block;
+}
+
+fieldset.options {
+    clear:left;
+}
+
+fieldset.options ul {
+    list-style:none;
+    margin:0.25em 0 0.25em 20%;
+}
+
+fieldset.options li {
+    margin-left:0;
+}
+
+fieldset.options ul label {
+    float:none;
+    width:auto;
+    font-weight:normal;
+}
+
+/* ============================================================
+	Clearfix
+============================================================ */
+.clearfix { display: inline-block; }
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/* ============================================================
+	LAYOUT
+============================================================ */
+
+body {
+	position: relative;
+}
+
+/* ============================================================
+	Banner
+============================================================ */
+[role="banner"] h1 {
+	margin: 0;
+}
+
+[role="banner"] [rel="home"] {
+	background-image: url(img/logo.png);
+	background-repeat: none;
+	width: 223px;
+	height: 154px;
+	position: relative;
+	display: block;
+	z-index: 1;
+	text-indent: -99em
+}
+
+/* ============================================================
+	Navigation
+============================================================ */
+.menu ul {
+	margin: 0 0 1em 0;
+	list-style: none;
+	border-bottom: 1px dotted #ccc;
+	text-transform: uppercase;
+}
+
+.menu ul li {
+	display: inline;
+	margin-right: 1.2em;
+}
+
+.menu a {	
+	line-height: 2em;
+}
+
+/* ============================================================
+	Document
+============================================================ */
+/* Wrap */
+.wrap {
+	margin: 0 auto;
+}
+@media screen and (min-width:55em) {
+	.wrap {
+		width: 100%;
+		max-width: 960px;
+	}
+}
+
+/* Main */
+.main {
+	margin-bottom: 2em;
+}
+
+/* ============================================================
+	Footer
+============================================================ */
+footer {
+	margin: 2.5em 0 1em;
+}
+
+/* ============================================================
+	Print
+============================================================ */
+@media print {
+* {
+	background: transparent !important;
+	color: black !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	filter: none !important;
+	-ms-filter: none !important;
+}
+
+/* ============================================================
+	PATTERNS
+============================================================ */
+.buy-table {
+	width: 400px;
+}
+
+.buy-table th, .buy-table td {
+	text-align: center;
+}
+
+.vcard ul {
+	list-style: none;
+	margin: 0 0 2em 0;
+}
+
+.read-more {
+	background: #ccc;
+	padding: 4px 8px;
+	font-size: 0.75em; /* 12px */
+	-webkit-border-radius: 2px;
+}
+
+.read-more:hover {
+	background: #ddd;
+}
