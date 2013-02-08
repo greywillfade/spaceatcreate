@@ -3,20 +3,22 @@ get_header(); ?>
 	
 	<div role="document">
 		<div class="row main" role="main">
-			<h1>Past Exhibitions</h1>
+			<h1>Future Exhibitions</h1>
 			<?php global $querystr, $today; // not sure this is required in 3+
 			
 			date_default_timezone_set('GMT');
-			$today = date('d/m/y');
-			preg_replace('{/}', '', $today); // takes the date format and removes slashes to create a numeric string
 			
 			$querystr = "
-				SELECT $wpdb->posts.*
-				FROM $wpdb->posts, $wpdb->postmeta
-				WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id 
-				AND $wpdb->posts.post_type = 'event' 
-				AND $wpdb->posts.post_status = 'publish' 
-				ORDER BY $wpdb->posts.post_date ASC	 
+				SELECT p.*, pm.meta_key, pm.meta_value AS eventstartdate
+				FROM $wpdb->posts AS p
+				LEFT JOIN $wpdb->postmeta AS pm
+    					ON (p.ID = pm.post_id)
+				WHERE
+    					p.post_type = 'event' 
+				AND p.post_status = 'publish' 
+				AND pm.meta_key = 'event_start_date'
+				AND DATEDIFF(STR_TO_DATE(pm.meta_value,'%d/%m/%Y'),date(now())) > 0
+				ORDER BY p.post_date ASC 
 			";
 			
 			$event_posts = $wpdb->get_results($querystr, OBJECT);
